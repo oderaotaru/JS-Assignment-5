@@ -26,15 +26,26 @@ console.log(fruits.push("avocado", "mango"))
 //Section 2
 
 var num = [];
+var count = 1;
 function writeNum(){
-    let newNum = [...num]
-    newNum.push((num++)+1)
-    num = newNum
-    console.log(num)
+    while(count <= 101){
+    if(count % 3 === 0 && count % 5 === 0){
+        num.push("FizzBuzz")
+    } else if(count % 3 === 0){
+        num.push("Fizz")
+    } else if(count % 5 === 0){
+        num.push("Buzz")
+    } else{
+        num.push(count)
+    }
+    
+    count++
+    }
+    console.log(num);
 }
-writeNum();
-writeNum();
-writeNum();
-writeNum();
+
+
+writeNum()
+
 
 
